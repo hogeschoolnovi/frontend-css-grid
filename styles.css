@@ -1,7 +1,20 @@
 /*Maak hier jouw CSS!*/
 .container {
     display: grid;
-
+    background-color: hsla(205, 100%, 90%, 1);
+    row-gap: 16px;
+    column-gap: 16px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px auto 50px 50px 50px 100px 50px;
+    grid-template-areas:
+        "item-a"
+        "item-b"
+        "item-c"
+        "item-d"
+        "item-e"
+        "item-empty"
+        "item-f"
+;
 }
 
 .item {
