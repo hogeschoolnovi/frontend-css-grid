@@ -1,1 +1,79 @@
-/*Maak hier jouw CSS!*/
+/* CSS grid classes and id's */
+
+.grid-container {
+  display: grid;
+  grid-template: 50px auto 50px 50px 50px 50px 50px / 1fr;
+  gap: 16px 16px;
+  grid-template-areas:
+    "A"
+    "B"
+    "C"
+    "D"
+    "E"
+    "."
+    "F";
+}
+
+#item-1 {
+  grid-area: A;
+  height: 50px;
+}
+
+#item-2 {
+  grid-area: B;
+  height: 100%;
+}
+
+#item-3 {
+  grid-area: C;
+  height: 50px;
+}
+
+#item-4 {
+  grid-area: D;
+  height: 50px;
+}
+
+#item-6 {
+  grid-area: E;
+}
+
+#item-5 {
+  grid-area: F;
+  height: 50px;
+}
+
+/* Normal classes */
+.item {
+  background: hsl(355, 52%, 48%);
+  color: #ffffff;
+}
+
+.item:not(#item-2) {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Media queries */
+
+/* Desktop */
+@media only screen and (min-width: 1025px) {
+  .grid-container {
+    grid-template: 50px 174px auto 50px / 1fr 1fr 1fr;
+    grid-template-areas:
+      "A C C"
+      "B C C"
+      "B E D"
+      "F F F";
+  }
+
+  #item-3 {
+    height: 240px;
+  }
+
+  #item-4 {
+    min-height: 100px;
+  }
+}
