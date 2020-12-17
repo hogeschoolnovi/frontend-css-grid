@@ -5,7 +5,7 @@
     row-gap: 16px;
     column-gap: 16px;
     grid-template-columns: 1fr;
-    grid-template-rows: 50px auto 50px 50px 50px 100px 50px;
+    grid-template-rows: 50px auto 50px 50px 100px 50px 50px;
     grid-template-areas:
         "item-a"
         "item-b"
@@ -18,5 +18,48 @@
 }
 
 .item {
+    background-color: hsla(205, 100%, 40%, 1);
+    color: hsla(360, 100%, 100%, 1);
+}
 
+#item-empty {
+    grid-area: item-empty;
+    background-color: hsla(205, 100%, 90%, 1);
+    height: 50px;
+}
+#item-a {
+    grid-area: item-a;
+}
+#item-b {
+    grid-area: item-b;
+}
+#item-c {
+    grid-area: item-c;
+}
+#item-d {
+    grid-area: item-d;
+}
+#item-e {
+    grid-area: item-e;
+}
+#item-f {
+    grid-area: item-f;
+}
+@media screen and (min-width: 576px) {
+    /*styling toegepast op GROTER dan mobiel*/
+    /*dus tablets en web en beyond*/
+    .container {
+        background-color: hsla(205, 100%, 90%, 1);
+        display: grid;
+        row-gap: 16px;
+        column-gap: 16px;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 50px 190px 100px auto 50px;
+        grid-template-areas:
+        "item-a item-c item-c"
+        "item-b item-c item-c"
+        "item-b item-e item-d"
+        "item-b item-e item-empty"
+        "item-f item-f item-f"
+    }
 }
