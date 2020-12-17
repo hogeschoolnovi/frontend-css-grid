@@ -12,7 +12,7 @@
         "item-c"
         "item-d"
         "item-e"
-        "item-empty"
+        "."
         "item-f"
 ;
 }
@@ -22,11 +22,6 @@
     color: hsla(360, 100%, 100%, 1);
 }
 
-#item-empty {
-    grid-area: item-empty;
-    background-color: hsla(205, 100%, 90%, 1);
-    height: 50px;
-}
 #item-a {
     grid-area: item-a;
 }
@@ -59,7 +54,7 @@
         "item-a item-c item-c"
         "item-b item-c item-c"
         "item-b item-e item-d"
-        "item-b item-e item-empty"
+        "item-b item-e ."
         "item-f item-f item-f"
     }
 }
