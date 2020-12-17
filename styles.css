@@ -2,16 +2,8 @@
 
 .grid-container {
   display: grid;
-  grid-template: 50px auto 50px 50px 50px 50px 50px / 1fr;
+  grid-template: "A" 50px "B" auto "C" 50px "D" 50px "E" 50px "." 50px "F" 50px / 1fr;
   gap: 16px 16px;
-  grid-template-areas:
-    "A"
-    "B"
-    "C"
-    "D"
-    "E"
-    "."
-    "F";
 }
 
 #item-1 {
@@ -61,12 +53,7 @@
 /* Desktop */
 @media only screen and (min-width: 1025px) {
   .grid-container {
-    grid-template: 50px 174px auto 50px / 1fr 1fr 1fr;
-    grid-template-areas:
-      "A C C"
-      "B C C"
-      "B E D"
-      "F F F";
+    grid-template: "A C C" 50px "B C C" 174px "B E D" auto "F F F" 50px / 1fr 1fr 1fr;
   }
 
   #item-3 {
