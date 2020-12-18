@@ -37,13 +37,13 @@
 
 /* Normal classes */
 .item {
-  background: hsl(355, 52%, 48%);
-  color: #ffffff;
+  display: flex;
+  background: hsl(355, 52%, 48%, 1);
+  color: hsla(360, 100%, 100%, 1);
+  flex-flow: column wrap;
 }
 
 .item:not(#item-2) {
-  display: flex;
-  flex-flow: column;
   justify-content: center;
   align-items: center;
 }
@@ -51,7 +51,7 @@
 /* Media queries */
 
 /* Desktop */
-@media only screen and (min-width: 1025px) {
+@media only screen and (min-width: 576px) {
   .grid-container {
     grid-template: "A C C" 50px "B C C" 174px "B E D" auto "F F F" 50px / 1fr 1fr 1fr;
   }
