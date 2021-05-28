@@ -1,1 +1,67 @@
 /*Maak hier jouw CSS!*/
+body {
+    background-color: white;
+    color: white;
+}
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px auto 50px 50px 50px 50px 50px;
+    grid-template-areas:
+    "element-a"
+    "element-b"
+    "element-c"
+    "element-d"
+    "element-e"
+    "."
+    "element-f";
+    gap: 16px;
+    background-color: antiquewhite;
+    padding: 16px;
+}
+
+@media only screen and (min-width: 575px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 50px 190px 100px auto 50px;
+        grid-template-areas:
+        "element-a element-c element-c"
+        "element-b element-c element-c"
+        "element-b element-e element-d"
+        "element-b element-e ."
+        "element-f element-f element-f";
+        gap: 16px;
+        background-color: antiquewhite;
+        padding: 24px 16px;
+    }
+}
+
+.element-bg-color {
+    background-color: brown;
+}
+.element-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.element-a {
+    grid-area: element-a;
+}
+.element-b {
+    grid-area: element-b;
+    padding: 10px;
+}
+.element-c {
+    grid-area: element-c;
+}
+.element-d {
+    grid-area: element-d;
+}
+.element-e {
+    grid-area: element-e;
+}
+.element-f {
+    grid-area: element-f;
+}
