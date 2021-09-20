@@ -1,11 +1,10 @@
 /*Maak hier jouw CSS!*/
-:root {
 
-}
-
+/*Desktop version*/
 body {
    color: aliceblue;
 }
+/*Container*/
 .container {
    background: bisque;
    display: grid;
@@ -17,9 +16,8 @@ body {
    "boxB boxE boxD"
    "boxF boxF boxF";
    grid-gap: 16px;
-
-
 }
+/* boxen A t/m F*/
 #boxA {
    background: brown;
    grid-area:boxA;
@@ -29,20 +27,12 @@ body {
    align-content: center;
    justify-items: center;
    align-items: center;
-
-
-
-
 }
 #boxB {
    background: brown;
    grid-area:boxB;
    height:auoto px;
    padding: 10px;
-
-
-
-
 }
 #boxC {
    background: brown;
@@ -62,7 +52,6 @@ body {
    align-content: center;
    justify-items: center;
    align-items: center;
-
 }
 #boxE {
    background: brown;
@@ -84,4 +73,22 @@ body {
    justify-items: center;
    align-items: center
 }
+/*Media query & Mobile view*/
+@media only screen and (max-width: 550px) {
+.container{
+   grid-template-columns: 1fr;
+   grid-template-rows: 50px 1fr 50px 50px 50px 50px 50px;
+   grid-gap: 16px;
+   grid-template-areas:
+   "boxA"
+   "boxB"
+   "boxC"
+   "boxD"
+   "boxE"
+   "."
+   "boxF";
+}
+
+}
+/* Einde*/
 
