@@ -1,1 +1,82 @@
 /*Maak hier jouw CSS!*/
+*{
+    padding: 0;
+    margin: 5px;
+    box-sizing: border-box;
+
+}
+.container div{
+    display: flex;
+    border: 1px solid #341a0e;
+    align-items: center;
+    justify-content: center;
+
+
+}
+.container{
+    display: grid;
+
+    grid-template-columns: repeat(3,1fr) ;
+    grid-template-rows: 50px 190px 100px 200px 50px;
+    grid-template-areas:
+    "da dc dc"
+    "db dc dc"
+    "db de dd"
+    "db de ."
+    "df df df"
+
+;
+}
+.container div span{
+    color: white;
+}
+.A{
+    grid-area: da;
+    background-color: #a5462e;
+}
+.B{
+    grid-area: db;
+    background: #a5462e;
+    align-self: stretch;
+    align-content: stretch;
+
+
+}
+.B span{
+    height: 100%;
+    padding: 10px;
+}
+.C{
+    grid-area: dc;
+    background: #a5462e;
+}
+.D{
+    grid-area: dd;
+    background: #a5462e;
+}
+.E{
+    grid-area: de;
+    background: #a5462e;
+}
+.F{
+    grid-area: df;
+    background: #a5462e;
+}
+@media screen and (max-width: 500px){
+    .container{
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 50px auto 50px 50px 50px 50px 50px;
+        grid-template-areas:
+          "da da da"
+          "db db db"
+          "dc dc dc"
+          "dd dd dd"
+          "de de de"
+          ". . ."
+          "df df df"
+
+
+    ;
+    }
+
+}
