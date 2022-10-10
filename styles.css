@@ -1,1 +1,94 @@
 /*Maak hier jouw CSS!*/
+
+/*Desktop version*/
+body {
+   color: aliceblue;
+}
+/*Container*/
+.container {
+   background: bisque;
+   display: grid;
+   grid-template-rows:50px 175px 1fr 50px;
+   grid-template-columns: 1fr 1fr 1fr;
+   grid-template-areas:
+   "boxA boxC boxC"
+   "boxB boxC boxC"
+   "boxB boxE boxD"
+   "boxF boxF boxF";
+   grid-gap: 16px;
+}
+/* boxen A t/m F*/
+#boxA {
+   background: brown;
+   grid-area:boxA;
+   height: 50px;
+   display: flex;
+   justify-content: center;
+   align-content: center;
+   justify-items: center;
+   align-items: center;
+}
+#boxB {
+   background: brown;
+   grid-area:boxB;
+   height:auoto px;
+   padding: 10px;
+}
+#boxC {
+   background: brown;
+   grid-area: boxC;
+   display: grid;
+   height: 240px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+#boxD {
+   background: brown;
+   grid-area: boxD;
+   height: 100px;
+   display: flex;
+   justify-content: center;
+   align-content: center;
+   justify-items: center;
+   align-items: center;
+}
+#boxE {
+   background: brown;
+   grid-area: boxE;
+   height: 240px;
+   display: flex;
+   justify-content: center;
+   align-content: center;
+   justify-items: center;
+   align-items: center;
+}
+#boxF {
+   background: brown;
+   grid-area: boxF;
+   height: 50px;
+   display: flex;
+   justify-content: center;
+   align-content: center;
+   justify-items: center;
+   align-items: center
+}
+/*Media query & Mobile view*/
+@media only screen and (max-width: 550px) {
+.container{
+   grid-template-columns: 1fr;
+   grid-template-rows: 50px 1fr 50px 50px 50px 50px 50px;
+   grid-gap: 16px;
+   grid-template-areas:
+   "boxA"
+   "boxB"
+   "boxC"
+   "boxD"
+   "boxE"
+   "."
+   "boxF";
+}
+
+}
+/* Einde*/
+
